@@ -1,11 +1,11 @@
-About pyyaml-include
-====================
+About pyyaml-include-feedstock
+==============================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyyaml-include-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/tanbro/pyyaml-include
 
 Package license: GPL-3.0-only
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyyaml-include-feedstock/blob/main/LICENSE.txt)
 
 Summary: Extending PyYAML with a custom constructor for including YAML files within YAML files
 
