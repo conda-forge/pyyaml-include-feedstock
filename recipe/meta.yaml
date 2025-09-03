@@ -1,13 +1,13 @@
 {% set name = "pyyaml-include" %}
-{% set version = "1.4.1" %}
+{% set version = "2.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pyyaml-include-{{ version }}.tar.gz
-  sha256: 1a96e33a99a3e56235f5221273832464025f02ff3d8539309a3bf00dec624471
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 6f0c7e2ac56cdd9cc305b04122817b55514e6ce8584869fae2bc2a4ef2e0d40f
 
 build:
   noarch: python
@@ -25,10 +25,14 @@ requirements:
   run:
     - python >={{ python_min }}
     - pyyaml >=6.0,<7.0
+    - fsspec >=2021.04.0
+    # Remove once Python 3.10 support is dropped,
+    # see https://github.com/tanbro/pyyaml-include/blob/v2.2/pyproject.toml#L16C4-L16C21
+    - typing-extensions
 
 test:
   imports:
-    - yamlinclude
+    - yaml_include
   commands:
     - pip check
   requires:
