@@ -144,7 +144,5 @@ Feedstock Maintainers
 =====================
 
 * [@kir0ul](https://github.com/kir0ul/)
-
-
-<!-- dummy commit to enable rerendering -->
+* [@traversaro](https://github.com/traversaro/)
 
