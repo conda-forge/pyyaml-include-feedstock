@@ -25,10 +25,14 @@ requirements:
   run:
     - python >={{ python_min }}
     - pyyaml >=6.0,<7.0
+    - fsspec >=2021.04.0
+    # Remove once Python 3.10 support is dropped,
+    # see https://github.com/tanbro/pyyaml-include/blob/v2.2/pyproject.toml#L16C4-L16C21
+    - typing-extensions
 
 test:
   imports:
-    - yamlinclude
+    - yaml_include
   commands:
     - pip check
   requires:
